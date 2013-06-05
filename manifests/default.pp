@@ -12,7 +12,7 @@ package { 'curl': }
 package { 'mc': }
 package { 'htop': }
 package { 'screen': }
-
+package { 'rabbitmq-server': }
 file { "/home/capifony":
     ensure => "directory",
     owner  => "vagrant",
