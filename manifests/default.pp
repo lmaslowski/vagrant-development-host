@@ -29,30 +29,18 @@ nginx::vhost { 'local.example.com':
 }
 
 nginx::vhost { 'local.example2.com':
-    framework => 'lithium'
+    framework => 'symfony2'
 }
 
 nginx::vhost { 'local.example3.com':
-    framework => 'default'
-}
-
-nginx::vhost { 'local.parku.ch':
-    framework => 'symfony2'
-}
-
-nginx::vhost { 'local.deployment-parku.ch':
-    framework => 'symfony2',
-    is_local_deploy => 'true'
-}
-
-nginx::vhost { 'local.legacy-parku.ch':
-    framework => 'symfony2'
+    framework => 'zf2'
 }
 
 nginx::vhost { 'local.remind-about.com':
-    framework => 'symfony2'
+    framework => 'zf2'
 }
 
+include vim
 include mysql
 include php
 include locale

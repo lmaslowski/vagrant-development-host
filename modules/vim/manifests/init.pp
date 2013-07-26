@@ -6,7 +6,7 @@ class vim {
 
   package { 'vim': }
   
-  file { "/vagrant/.vimrc":
+  file { "/home/vagrant/.vimrc":
     source => 'puppet:///modules/vim/vimrc',
   }
 
