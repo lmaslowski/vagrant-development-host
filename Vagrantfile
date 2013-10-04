@@ -35,6 +35,7 @@ Vagrant::Config.run do |config|
   # Share an additional folder to the guest VM. The first argument is
   # an identifier, the second is the path on the guest to mount the
   # folder, and the third is the path on the host to the actual folder.
+  config.vm.share_folder( "local.sparwelt.de", "/home/local.sparwelt.de", "/Users/pawelgraczyk/Workspaces/php/sf2/local.sparwelt.de", :owner => "vagrant", :group => "vagrant", :create=> true)
   config.vm.share_folder( "local.example.com", "/home/local.example.com", "/Users/pawelgraczyk/Workspaces/php/sf2/local.example.com", :owner => "vagrant", :group => "vagrant", :create=> true)
   config.vm.share_folder( "local.example2.com", "/home/local.example2.com", "/Users/pawelgraczyk/Workspaces/php/sf2/local.example2.com", :owner => "vagrant", :group => "vagrant", :create=> true)
   config.vm.share_folder( "local.example3.com", "/home/local.example3.com", "/Users/pawelgraczyk/Workspaces/php/zf2/local.example3.com", :owner => "vagrant", :group => "vagrant", :create=> true)

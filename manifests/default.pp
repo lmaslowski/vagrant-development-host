@@ -19,6 +19,10 @@ file { "/home/capifony":
     group  => "vagrant",
 }
   
+nginx::vhost { 'local.sparwelt.de':
+    framework => 'symfony2'
+}
+
 file {  "/etc/nginx/sites-enabled/default":
   ensure => absent,
   notify  => Exec['reload_nginx'],
@@ -36,9 +40,9 @@ nginx::vhost { 'local.example3.com':
     framework => 'zf2'
 }
 
-nginx::vhost { 'local.remind-about.com':
-    framework => 'zf2'
-}
+#nginx::vhost { 'local.remind-about.com':
+#    framework => 'zf2'
+#}
 
 include vim
 include mysql
